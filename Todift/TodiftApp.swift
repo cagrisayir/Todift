@@ -11,7 +11,7 @@ import SwiftUI
 struct TodiftApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TodiftView()
         }
     }
 }

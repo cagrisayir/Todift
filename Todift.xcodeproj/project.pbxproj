@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0605233E2B49786400A8FCAF /* TodiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0605233D2B49786400A8FCAF /* TodiftApp.swift */; };
-		060523402B49786400A8FCAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0605233F2B49786400A8FCAF /* ContentView.swift */; };
+		060523402B49786400A8FCAF /* TodiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0605233F2B49786400A8FCAF /* TodiftView.swift */; };
 		060523422B49786500A8FCAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 060523412B49786500A8FCAF /* Assets.xcassets */; };
 		060523452B49786500A8FCAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 060523442B49786500A8FCAF /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		0605233A2B49786400A8FCAF /* Todift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0605233D2B49786400A8FCAF /* TodiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodiftApp.swift; sourceTree = "<group>"; };
-		0605233F2B49786400A8FCAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0605233F2B49786400A8FCAF /* TodiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodiftView.swift; sourceTree = "<group>"; };
 		060523412B49786500A8FCAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		060523442B49786500A8FCAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,8 +51,10 @@
 		0605233C2B49786400A8FCAF /* Todift */ = {
 			isa = PBXGroup;
 			children = (
+				0605234D2B49790000A8FCAF /* Extensions */,
+				0605234C2B4978F900A8FCAF /* Views */,
+				0605234B2B4978F400A8FCAF /* Models */,
 				0605233D2B49786400A8FCAF /* TodiftApp.swift */,
-				0605233F2B49786400A8FCAF /* ContentView.swift */,
 				060523412B49786500A8FCAF /* Assets.xcassets */,
 				060523432B49786500A8FCAF /* Preview Content */,
 			);
@@ -65,6 +67,28 @@
 				060523442B49786500A8FCAF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0605234B2B4978F400A8FCAF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0605234C2B4978F900A8FCAF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0605233F2B49786400A8FCAF /* TodiftView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0605234D2B49790000A8FCAF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				060523402B49786400A8FCAF /* ContentView.swift in Sources */,
+				060523402B49786400A8FCAF /* TodiftView.swift in Sources */,
 				0605233E2B49786400A8FCAF /* TodiftApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
