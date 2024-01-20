@@ -10,10 +10,7 @@ import SwiftUI
 struct TodosListView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            SettingsView()
         }
         .padding()
     }
