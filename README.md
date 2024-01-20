@@ -1,4 +1,4 @@
-# To-do app 
+# Todift: To-do App 
 
 This is a To-do app made with Swift, SwiftUI and Firebase by cagrisayir. 
 
