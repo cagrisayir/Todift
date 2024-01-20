@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct TodiftApp: App {
+struct MainApp: App {
     var body: some Scene {
         WindowGroup {
-            TodiftView()
+            TodosListView()
         }
     }
 }

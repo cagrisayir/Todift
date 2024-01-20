@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TodiftView: View {
+struct TodosListView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -20,5 +20,5 @@ struct TodiftView: View {
 }
 
 #Preview {
-    TodiftView()
+    TodosListView()
 }
