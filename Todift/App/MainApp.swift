@@ -25,7 +25,7 @@ struct MainApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                ContentView()
+                SplashScreenView()
                     .fullScreenCover(isPresented: $needsOnboarding, onDismiss: {
                         needsOnboarding = false
                     }, content: {
