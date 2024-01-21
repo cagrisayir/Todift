@@ -40,6 +40,7 @@
 		06E223D42B5BC49A00CAB6B0 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 06E223D32B5BC49A00CAB6B0 /* FirebaseStorage */; };
 		06E223D62B5BC49A00CAB6B0 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 06E223D52B5BC49A00CAB6B0 /* FirebaseStorageCombine-Community */; };
 		06E223D82B5BCB1800CAB6B0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E223D72B5BCB1800CAB6B0 /* SettingsView.swift */; };
+		06E224522B5D715600CAB6B0 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E224512B5D715600CAB6B0 /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		060523442B49786500A8FCAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		06E2239E2B5BC3B100CAB6B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		06E223D72B5BCB1800CAB6B0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		06E224512B5D715600CAB6B0 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 		06E2244B2B5D6E5D00CAB6B0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				06E224502B5D713300CAB6B0 /* Onboarding */,
 				06E2244F2B5D6ED000CAB6B0 /* Todos */,
 				06E2244E2B5D6E7A00CAB6B0 /* Authentication */,
 				06E2244D2B5D6E7300CAB6B0 /* Root */,
@@ -197,6 +200,14 @@
 			children = (
 			);
 			path = Todos;
+			sourceTree = "<group>";
+		};
+		06E224502B5D713300CAB6B0 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				06E224512B5D715600CAB6B0 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06E223D82B5BCB1800CAB6B0 /* SettingsView.swift in Sources */,
+				06E224522B5D715600CAB6B0 /* OnboardingView.swift in Sources */,
 				060523402B49786400A8FCAF /* ContentView.swift in Sources */,
 				0605233E2B49786400A8FCAF /* MainApp.swift in Sources */,
 			);

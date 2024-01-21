@@ -20,10 +20,18 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct MainApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @AppStorage("needs_onboarding") var needsOnboarding: Bool = true
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                ContentView()
+                    .fullScreenCover(isPresented: $needsOnboarding, onDismiss: {
+                        needsOnboarding = false
+                    }, content: {
+                        OnboardingView()
+                    })
+            }
         }
     }
 }
