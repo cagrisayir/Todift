@@ -7,15 +7,14 @@
 
 import SwiftUI
 
-struct TodosListView: View {
+struct ContentView: View {
     var body: some View {
         VStack {
-            SettingsView()
         }
         .padding()
     }
 }
 
 #Preview {
-    TodosListView()
+    ContentView()
 }
