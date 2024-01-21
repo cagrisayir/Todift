@@ -18,12 +18,19 @@ struct OnboardingView: View {
 
             VStack {
                 Text("Welcome to the app")
+                    .padding(.top, 100)
+                    .font(.title)
+                    .fontWeight(.heavy)
+                    .foregroundStyle(.white)
                 Spacer()
-                Text("Onboarding View")
+                Image("welcome")
+                    .resizable()
+                    .scaledToFit()
                 Spacer()
-                Button("Skip") {
+                Button("Press here to explore") {
                     dismiss()
                 }
+                .foregroundStyle(.white)
             }
         }
     }
