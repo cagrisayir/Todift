@@ -12,7 +12,8 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("Content View")
-            AdBannerView(adUnitID: "ca-app-pub-1340406174185898/6639745137").frame(height: 50)
+            AdBannerView(adUnitID: "ca-app-pub-3940256099942544/2934735716").frame(height: 200).background(.red)
+            Text("Ustumde")
         }
         .padding()
     }
