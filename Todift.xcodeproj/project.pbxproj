@@ -45,9 +45,13 @@
 		06E224562B5D791400CAB6B0 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E224552B5D791400CAB6B0 /* SplashScreenView.swift */; };
 		06E224582B5D821A00CAB6B0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E224572B5D821A00CAB6B0 /* User.swift */; };
 		06E2245A2B5D822700CAB6B0 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E224592B5D822700CAB6B0 /* Todo.swift */; };
+		06E2245E2B5E6C0B00CAB6B0 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 06E2245D2B5E6C0B00CAB6B0 /* GoogleMobileAds */; };
+		06E224602B5E6D4A00CAB6B0 /* AdBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E2245F2B5E6D4A00CAB6B0 /* AdBannerView.swift */; };
+		37B053C76599D2708168953D /* Pods_Todift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0453DE9ED29DDD5282ED4248 /* Pods_Todift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0453DE9ED29DDD5282ED4248 /* Pods_Todift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0605233A2B49786400A8FCAF /* Todift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0605233D2B49786400A8FCAF /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		0605233F2B49786400A8FCAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +64,9 @@
 		06E224552B5D791400CAB6B0 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		06E224572B5D821A00CAB6B0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		06E224592B5D822700CAB6B0 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		06E2245F2B5E6D4A00CAB6B0 /* AdBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerView.swift; sourceTree = "<group>"; };
+		0BD6A77CECBB5043DF1051ED /* Pods-Todift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todift.debug.xcconfig"; path = "Target Support Files/Pods-Todift/Pods-Todift.debug.xcconfig"; sourceTree = "<group>"; };
+		3E504FFEAFC8FE98267C4E9A /* Pods-Todift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todift.release.xcconfig"; path = "Target Support Files/Pods-Todift/Pods-Todift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +94,7 @@
 				06E223D02B5BC49A00CAB6B0 /* FirebaseRemoteConfig in Frameworks */,
 				06E223AC2B5BC49A00CAB6B0 /* FirebaseAppDistribution-Beta in Frameworks */,
 				06E223B02B5BC49A00CAB6B0 /* FirebaseAuthCombine-Community in Frameworks */,
+				06E2245E2B5E6C0B00CAB6B0 /* GoogleMobileAds in Frameworks */,
 				06E223CE2B5BC49A00CAB6B0 /* FirebasePerformance in Frameworks */,
 				06E223C62B5BC49A00CAB6B0 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
 				06E223D42B5BC49A00CAB6B0 /* FirebaseStorage in Frameworks */,
@@ -94,6 +102,7 @@
 				06E223BC2B5BC49A00CAB6B0 /* FirebaseFirestoreCombine-Community in Frameworks */,
 				06E223CC2B5BC49A00CAB6B0 /* FirebaseMessaging in Frameworks */,
 				06E223C82B5BC49A00CAB6B0 /* FirebaseInstallations in Frameworks */,
+				37B053C76599D2708168953D /* Pods_Todift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +114,8 @@
 			children = (
 				0605233C2B49786400A8FCAF /* Todift */,
 				0605233B2B49786400A8FCAF /* Products */,
+				36416EDCA798020D6B6F4690 /* Pods */,
+				A421BF56735C217FDBF838C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,6 +178,7 @@
 		06E2244A2B5D6E2F00CAB6B0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				06E2245F2B5E6D4A00CAB6B0 /* AdBannerView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -222,6 +234,23 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		36416EDCA798020D6B6F4690 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0BD6A77CECBB5043DF1051ED /* Pods-Todift.debug.xcconfig */,
+				3E504FFEAFC8FE98267C4E9A /* Pods-Todift.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A421BF56735C217FDBF838C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0453DE9ED29DDD5282ED4248 /* Pods_Todift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -229,9 +258,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 060523482B49786500A8FCAF /* Build configuration list for PBXNativeTarget "Todift" */;
 			buildPhases = (
+				C56626E2FB1F82CE8FB4185F /* [CP] Check Pods Manifest.lock */,
 				060523362B49786400A8FCAF /* Sources */,
 				060523372B49786400A8FCAF /* Frameworks */,
 				060523382B49786400A8FCAF /* Resources */,
+				26CC6907D318F9B2BEDBCC79 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -266,6 +297,7 @@
 				06E223D12B5BC49A00CAB6B0 /* FirebaseRemoteConfigSwift */,
 				06E223D32B5BC49A00CAB6B0 /* FirebaseStorage */,
 				06E223D52B5BC49A00CAB6B0 /* FirebaseStorageCombine-Community */,
+				06E2245D2B5E6C0B00CAB6B0 /* GoogleMobileAds */,
 			);
 			productName = Todift;
 			productReference = 0605233A2B49786400A8FCAF /* Todift.app */;
@@ -297,6 +329,7 @@
 			mainGroup = 060523312B49786400A8FCAF;
 			packageReferences = (
 				06E223A02B5BC49A00CAB6B0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				06E2245C2B5E6C0B00CAB6B0 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			productRefGroup = 0605233B2B49786400A8FCAF /* Products */;
 			projectDirPath = "";
@@ -321,6 +354,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		26CC6907D318F9B2BEDBCC79 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Todift/Pods-Todift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Todift/Pods-Todift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Todift/Pods-Todift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C56626E2FB1F82CE8FB4185F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Todift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		060523362B49786400A8FCAF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -329,6 +404,7 @@
 				06E2245A2B5D822700CAB6B0 /* Todo.swift in Sources */,
 				06E223D82B5BCB1800CAB6B0 /* SettingsView.swift in Sources */,
 				06E224522B5D715600CAB6B0 /* OnboardingView.swift in Sources */,
+				06E224602B5E6D4A00CAB6B0 /* AdBannerView.swift in Sources */,
 				06E224582B5D821A00CAB6B0 /* User.swift in Sources */,
 				06E224562B5D791400CAB6B0 /* SplashScreenView.swift in Sources */,
 				060523402B49786400A8FCAF /* ContentView.swift in Sources */,
@@ -379,7 +455,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -445,7 +521,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -466,6 +542,7 @@
 		};
 		060523492B49786500A8FCAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BD6A77CECBB5043DF1051ED /* Pods-Todift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -474,13 +551,16 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Todift/Preview Content\"";
 				DEVELOPMENT_TEAM = BU7D27M3D7;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Todift/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -496,6 +576,7 @@
 		};
 		0605234A2B49786500A8FCAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E504FFEAFC8FE98267C4E9A /* Pods-Todift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -504,13 +585,16 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Todift/Preview Content\"";
 				DEVELOPMENT_TEAM = BU7D27M3D7;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Todift/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -554,6 +638,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 10.20.0;
+			};
+		};
+		06E2245C2B5E6C0B00CAB6B0 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.14.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -693,6 +785,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 06E223A02B5BC49A00CAB6B0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		06E2245D2B5E6C0B00CAB6B0 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06E2245C2B5E6C0B00CAB6B0 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -7,7 +7,6 @@
 
 import Foundation
 
-@Observable
 class Todo: Identifiable, Codable {
     var id: String
     var name: String

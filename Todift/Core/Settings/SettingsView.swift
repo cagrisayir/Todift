@@ -11,7 +11,7 @@ struct SettingsView: View {
     // For storing currently active App Icon
     @AppStorage("active_icon") var activeAppIcon: String = "AppIcon"
     var body: some View {
-        NavigationStack {
+        ZStack {
             Picker(selection: $activeAppIcon) {
                 let customIcons: [String] = ["AppIcon", "AppIcon 1"]
 
