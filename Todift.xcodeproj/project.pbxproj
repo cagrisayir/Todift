@@ -47,6 +47,8 @@
 		06E2245A2B5D822700CAB6B0 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E224592B5D822700CAB6B0 /* Todo.swift */; };
 		06E2245E2B5E6C0B00CAB6B0 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 06E2245D2B5E6C0B00CAB6B0 /* GoogleMobileAds */; };
 		06E224602B5E6D4A00CAB6B0 /* AdBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E2245F2B5E6D4A00CAB6B0 /* AdBannerView.swift */; };
+		06E2B70A2B5FE20700C30812 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E2B7092B5FE20700C30812 /* LoginView.swift */; };
+		06E2B70C2B5FE27000C30812 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E2B70B2B5FE27000C30812 /* InputView.swift */; };
 		37B053C76599D2708168953D /* Pods_Todift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0453DE9ED29DDD5282ED4248 /* Pods_Todift.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,8 @@
 		06E224572B5D821A00CAB6B0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		06E224592B5D822700CAB6B0 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		06E2245F2B5E6D4A00CAB6B0 /* AdBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerView.swift; sourceTree = "<group>"; };
+		06E2B7092B5FE20700C30812 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		06E2B70B2B5FE27000C30812 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		0BD6A77CECBB5043DF1051ED /* Pods-Todift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todift.debug.xcconfig"; path = "Target Support Files/Pods-Todift/Pods-Todift.debug.xcconfig"; sourceTree = "<group>"; };
 		3E504FFEAFC8FE98267C4E9A /* Pods-Todift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todift.release.xcconfig"; path = "Target Support Files/Pods-Todift/Pods-Todift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				06E2245F2B5E6D4A00CAB6B0 /* AdBannerView.swift */,
+				06E2B70B2B5FE27000C30812 /* InputView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -214,6 +219,8 @@
 		06E2244E2B5D6E7A00CAB6B0 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				06E2B7082B5FE1F200C30812 /* ViewModel */,
+				06E2B7072B5FE1EA00C30812 /* View */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -232,6 +239,21 @@
 				06E224552B5D791400CAB6B0 /* SplashScreenView.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		06E2B7072B5FE1EA00C30812 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				06E2B7092B5FE20700C30812 /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		06E2B7082B5FE1F200C30812 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		36416EDCA798020D6B6F4690 /* Pods */ = {
@@ -403,10 +425,12 @@
 			files = (
 				06E2245A2B5D822700CAB6B0 /* Todo.swift in Sources */,
 				06E223D82B5BCB1800CAB6B0 /* SettingsView.swift in Sources */,
+				06E2B70A2B5FE20700C30812 /* LoginView.swift in Sources */,
 				06E224522B5D715600CAB6B0 /* OnboardingView.swift in Sources */,
 				06E224602B5E6D4A00CAB6B0 /* AdBannerView.swift in Sources */,
 				06E224582B5D821A00CAB6B0 /* User.swift in Sources */,
 				06E224562B5D791400CAB6B0 /* SplashScreenView.swift in Sources */,
+				06E2B70C2B5FE27000C30812 /* InputView.swift in Sources */,
 				060523402B49786400A8FCAF /* ContentView.swift in Sources */,
 				0605233E2B49786400A8FCAF /* MainApp.swift in Sources */,
 			);
