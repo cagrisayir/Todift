@@ -9,14 +9,14 @@ import Foundation
 
 class Todo: Identifiable, Codable {
     var id: String
-    var name: String
+    var title: String
     var creationDate: Date
     var isDone: Bool
     var flag: Flags
 
-    init(name: String, flag: Flags) {
+    init(title: String, flag: Flags) {
         id = UUID().uuidString
-        self.name = name
+        self.title = title
         creationDate = Date()
         isDone = false
         self.flag = flag
@@ -27,4 +27,17 @@ enum Flags: Codable {
     case important
     case normal
     case notimportant
+}
+
+extension Todo {
+    func todoToDict() -> [String: Any] {
+        do {
+            let data = try JSONEncoder().encode(self)
+            let dictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
+            return dictionary ?? [:]
+        } catch {
+            print("Error while encoding todo \(error.localizedDescription)")
+            return [:]
+        }
+    }
 }

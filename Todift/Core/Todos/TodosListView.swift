@@ -12,12 +12,13 @@ struct TodosListView: View {
     var body: some View {
         VStack {
             if vm.todos != nil {
-                ForEach(vm.todos!, id: \.id) { todo in
-                    Text(todo.name)
-                }
+                
             } else {
                 Text("No Todo")
                 Button("Add todo") {
+                    Task {
+                        await vm.addTodo()
+                    }
                 }
             }
         }.onAppear(perform: {

@@ -12,6 +12,7 @@ import Foundation
 @MainActor
 class TodoViewModel: ObservableObject {
     @Published var todos: [Todo]?
+    @Published var errorString: String?
 
     init() {
         Task {
@@ -26,18 +27,26 @@ class TodoViewModel: ObservableObject {
         let currentUser = try? snapshot.data(as: User.self)
         todos = currentUser?.todos
     }
-//
-//    func addTodo() async {
-//        guard let uid = Auth.auth().currentUser?.uid else { return }
-//        let newTodo = Todo(name: "Yeni yapilacak", flag: Flags.important)
-//        todos.append(newTodo)
-//        do {
-//            let encodedtd = try Firestore.Encoder().encode(newTodo)
-//            try await Firestore.firestore().collection("users").document(uid).collection("todos").addDocument(data: encodedtd)
-//
-//            await fetchTodos()
-//        } catch {
-//            print(error)
-//        }
-//    }
+
+    func addTodo() async {
+        // Get current user id
+        guard let uId = Auth.auth().currentUser?.uid else { return }
+
+        // create model
+        let newTodo = Todo(title: "This is the first todo", flag: .important)
+        // save model
+        let db = Firestore.firestore()
+
+        do {
+            try await db.collection("users")
+                .document(uId)
+                .collection("todos")
+                .document(newTodo.id)
+                .setData(newTodo.todoToDict())
+
+        } catch {
+            print("Error accured in addTodo \(error)")
+            errorString = error.localizedDescription
+        }
+    }
 }
