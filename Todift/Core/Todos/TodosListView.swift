@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct TodosListView: View {
+    var vm: TodoViewModel
     var body: some View {
-        Text("Todos")
+        VStack {
+            if vm.todos != nil {
+                ForEach(vm.todos!, id: \.id) { todo in
+                    Text(todo.name)
+                }
+            } else {
+                Text("No Todo")
+                Button("Add todo") {
+                }
+            }
+        }.onAppear(perform: {
+            Task {
+                await vm.fetchTodos()
+            }
+        })
     }
-}
-
-#Preview {
-    TodosListView()
 }

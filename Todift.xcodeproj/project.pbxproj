@@ -52,6 +52,7 @@
 		06E2B70E2B5FE55400C30812 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E2B70D2B5FE55400C30812 /* RegisterView.swift */; };
 		06E2B7102B611A9F00C30812 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E2B70F2B611A9F00C30812 /* AuthViewModel.swift */; };
 		06E2B7122B611F5300C30812 /* TodosListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E2B7112B611F5300C30812 /* TodosListView.swift */; };
+		06E2B7142B612D4300C30812 /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E2B7132B612D4300C30812 /* TodoViewModel.swift */; };
 		37B053C76599D2708168953D /* Pods_Todift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0453DE9ED29DDD5282ED4248 /* Pods_Todift.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		06E2B70D2B5FE55400C30812 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		06E2B70F2B611A9F00C30812 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		06E2B7112B611F5300C30812 /* TodosListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosListView.swift; sourceTree = "<group>"; };
+		06E2B7132B612D4300C30812 /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
 		0BD6A77CECBB5043DF1051ED /* Pods-Todift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todift.debug.xcconfig"; path = "Target Support Files/Pods-Todift/Pods-Todift.debug.xcconfig"; sourceTree = "<group>"; };
 		3E504FFEAFC8FE98267C4E9A /* Pods-Todift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todift.release.xcconfig"; path = "Target Support Files/Pods-Todift/Pods-Todift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				06E2B7112B611F5300C30812 /* TodosListView.swift */,
+				06E2B7132B612D4300C30812 /* TodoViewModel.swift */,
 			);
 			path = Todos;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				06E2B7102B611A9F00C30812 /* AuthViewModel.swift in Sources */,
 				06E2B70C2B5FE27000C30812 /* InputView.swift in Sources */,
 				060523402B49786400A8FCAF /* ContentView.swift in Sources */,
+				06E2B7142B612D4300C30812 /* TodoViewModel.swift in Sources */,
 				0605233E2B49786400A8FCAF /* MainApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,5 +11,5 @@ struct User: Codable, Identifiable {
     let id: String
     let fullname: String
     let email: String
-    var todos: [Todo] = [Todo]()
+    var todos: [Todo]?
 }
