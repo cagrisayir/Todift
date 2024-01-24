@@ -9,16 +9,16 @@ import GoogleMobileAds
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Text("Content View")
-            AdBannerView(adUnitID: "ca-app-pub-3940256099942544/2934735716").frame(height: 200).background(.red)
-            Text("Ustumde")
-        }
-        .padding()
-    }
-}
+    @EnvironmentObject var viewModel: AuthViewModel
 
-#Preview {
-    ContentView()
+    var body: some View {
+        Group {
+            if viewModel.userSession != nil {
+                TodosListView()
+            } else {
+                LoginView()
+            }
+//            AdBannerView(adUnitID: "ca-app-pub-3940256099942544/2934735716").frame(height: 200)
+        }
+    }
 }

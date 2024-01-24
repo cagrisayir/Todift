@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-//    @EnvironmentObject var viewModel: AuthViewModel
+    @EnvironmentObject var viewModel: AuthViewModel
 
     @State var email = ""
     @State var password = ""
@@ -35,9 +35,9 @@ struct LoginView: View {
 
                 // sign in button
                 Button {
-//                    Task {
-//                        try await viewModel.login(withEmail: email, password: password)
-//                    }
+                    Task {
+                        try await viewModel.login(withEmail: email, password: password)
+                    }
                 } label: {
                     HStack {
                         Text("Sign In")
@@ -47,16 +47,16 @@ struct LoginView: View {
                         .frame(width: 300, height: 48)
                 }
                 .background(Color(.systemBlue))
-//                .disabled(!formIsValid)
-//                .opacity(formIsValid ? 1.0 : 0.5)
+                .disabled(!formIsValid)
+                .opacity(formIsValid ? 1.0 : 0.5)
                 .clipShape(.buttonBorder)
                 .padding(.top, 24)
 
                 Spacer()
                 // sign up button
                 NavigationLink {
-//                    RegisterView()
-//                        .navigationBarBackButtonHidden()
+                    RegisterView()
+                        .navigationBarBackButtonHidden()
                 } label: {
                     HStack(spacing: 3) {
                         Text("Don't have an account?")
@@ -67,8 +67,4 @@ struct LoginView: View {
             }
         }
     }
-}
-
-#Preview {
-    LoginView()
 }

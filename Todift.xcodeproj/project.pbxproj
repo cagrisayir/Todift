@@ -49,6 +49,9 @@
 		06E224602B5E6D4A00CAB6B0 /* AdBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E2245F2B5E6D4A00CAB6B0 /* AdBannerView.swift */; };
 		06E2B70A2B5FE20700C30812 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E2B7092B5FE20700C30812 /* LoginView.swift */; };
 		06E2B70C2B5FE27000C30812 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E2B70B2B5FE27000C30812 /* InputView.swift */; };
+		06E2B70E2B5FE55400C30812 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E2B70D2B5FE55400C30812 /* RegisterView.swift */; };
+		06E2B7102B611A9F00C30812 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E2B70F2B611A9F00C30812 /* AuthViewModel.swift */; };
+		06E2B7122B611F5300C30812 /* TodosListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E2B7112B611F5300C30812 /* TodosListView.swift */; };
 		37B053C76599D2708168953D /* Pods_Todift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0453DE9ED29DDD5282ED4248 /* Pods_Todift.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +72,9 @@
 		06E2245F2B5E6D4A00CAB6B0 /* AdBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerView.swift; sourceTree = "<group>"; };
 		06E2B7092B5FE20700C30812 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		06E2B70B2B5FE27000C30812 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		06E2B70D2B5FE55400C30812 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		06E2B70F2B611A9F00C30812 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		06E2B7112B611F5300C30812 /* TodosListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosListView.swift; sourceTree = "<group>"; };
 		0BD6A77CECBB5043DF1051ED /* Pods-Todift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todift.debug.xcconfig"; path = "Target Support Files/Pods-Todift/Pods-Todift.debug.xcconfig"; sourceTree = "<group>"; };
 		3E504FFEAFC8FE98267C4E9A /* Pods-Todift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todift.release.xcconfig"; path = "Target Support Files/Pods-Todift/Pods-Todift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -228,6 +234,7 @@
 		06E2244F2B5D6ED000CAB6B0 /* Todos */ = {
 			isa = PBXGroup;
 			children = (
+				06E2B7112B611F5300C30812 /* TodosListView.swift */,
 			);
 			path = Todos;
 			sourceTree = "<group>";
@@ -245,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				06E2B7092B5FE20700C30812 /* LoginView.swift */,
+				06E2B70D2B5FE55400C30812 /* RegisterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -252,6 +260,7 @@
 		06E2B7082B5FE1F200C30812 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				06E2B70F2B611A9F00C30812 /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -423,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06E2B70E2B5FE55400C30812 /* RegisterView.swift in Sources */,
 				06E2245A2B5D822700CAB6B0 /* Todo.swift in Sources */,
 				06E223D82B5BCB1800CAB6B0 /* SettingsView.swift in Sources */,
 				06E2B70A2B5FE20700C30812 /* LoginView.swift in Sources */,
@@ -430,6 +440,8 @@
 				06E224602B5E6D4A00CAB6B0 /* AdBannerView.swift in Sources */,
 				06E224582B5D821A00CAB6B0 /* User.swift in Sources */,
 				06E224562B5D791400CAB6B0 /* SplashScreenView.swift in Sources */,
+				06E2B7122B611F5300C30812 /* TodosListView.swift in Sources */,
+				06E2B7102B611A9F00C30812 /* AuthViewModel.swift in Sources */,
 				06E2B70C2B5FE27000C30812 /* InputView.swift in Sources */,
 				060523402B49786400A8FCAF /* ContentView.swift in Sources */,
 				0605233E2B49786400A8FCAF /* MainApp.swift in Sources */,
