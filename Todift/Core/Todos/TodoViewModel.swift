@@ -11,21 +11,15 @@ import Foundation
 
 @MainActor
 class TodoViewModel: ObservableObject {
-    @Published var todos: [Todo]?
     @Published var errorString: String?
+    @Published var items: [Todo] = [Todo]()
+
+    let db = Firestore.firestore()
 
     init() {
         Task {
             await fetchTodos()
         }
-    }
-
-    func fetchTodos() async {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        guard let snapshot = try? await Firestore.firestore().collection("users").document(uid).getDocument() else { return }
-
-        let currentUser = try? snapshot.data(as: User.self)
-        todos = currentUser?.todos
     }
 
     func addTodo() async {
@@ -35,7 +29,6 @@ class TodoViewModel: ObservableObject {
         // create model
         let newTodo = Todo(title: "This is the first todo", flag: .important)
         // save model
-        let db = Firestore.firestore()
 
         do {
             try await db.collection("users")
@@ -47,6 +40,18 @@ class TodoViewModel: ObservableObject {
         } catch {
             print("Error accured in addTodo \(error)")
             errorString = error.localizedDescription
+        }
+    }
+
+    func fetchTodos() async {
+        if let snapshot = try? await Firestore.firestore().collectionGroup("todos").getDocuments() {
+            for document in snapshot.documents {
+                if let todo = Todo.fromDictionary(document.data()) {
+                    items.append(todo)
+                } else {
+                    print("failed to add")
+                }
+            }
         }
     }
 }

@@ -15,7 +15,7 @@ struct ContentView: View {
         Group {
             if viewModel.userSession != nil {
                 TabView {
-                    TodosListView(vm: TodoViewModel())
+                    TodosListView()
                         .tabItem {
                             Text("Todos")
                         }

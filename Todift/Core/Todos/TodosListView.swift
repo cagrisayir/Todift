@@ -5,26 +5,19 @@
 //  Created by Omer Cagri Sayir on 24.01.2024.
 //
 
+import Firebase
+import FirebaseFirestoreSwift
 import SwiftUI
 
+@MainActor
 struct TodosListView: View {
-    var vm: TodoViewModel
+    @StateObject var vm: TodoViewModel = TodoViewModel()
+
     var body: some View {
         VStack {
-            if vm.todos != nil {
-                
-            } else {
-                Text("No Todo")
-                Button("Add todo") {
-                    Task {
-                        await vm.addTodo()
-                    }
-                }
+            ForEach(vm.items) { item in
+                Text(item.title)
             }
-        }.onAppear(perform: {
-            Task {
-                await vm.fetchTodos()
-            }
-        })
+        }
     }
 }

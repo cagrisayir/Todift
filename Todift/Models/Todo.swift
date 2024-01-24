@@ -8,11 +8,11 @@
 import Foundation
 
 class Todo: Identifiable, Codable {
-    var id: String
-    var title: String
-    var creationDate: Date
-    var isDone: Bool
-    var flag: Flags
+    let id: String
+    let title: String
+    let creationDate: Date
+    let isDone: Bool
+    let flag: Flags
 
     init(title: String, flag: Flags) {
         id = UUID().uuidString
@@ -38,6 +38,17 @@ extension Todo {
         } catch {
             print("Error while encoding todo \(error.localizedDescription)")
             return [:]
+        }
+    }
+
+    static func fromDictionary(_ dictionary: [String: Any]) -> Todo? {
+        do {
+            let data = try JSONSerialization.data(withJSONObject: dictionary, options: [])
+            let todo = try JSONDecoder().decode(Todo.self, from: data)
+            return todo
+        } catch {
+            print("Error decoding dictionary to Todo: \(error.localizedDescription)")
+            return nil
         }
     }
 }
