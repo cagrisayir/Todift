@@ -10,20 +10,29 @@ import SwiftUI
 struct SettingsView: View {
     // For storing currently active App Icon
     @AppStorage("active_icon") var activeAppIcon: String = "AppIcon"
+    @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
-        ZStack {
-            Picker(selection: $activeAppIcon) {
-                let customIcons: [String] = ["AppIcon", "AppIcon 1"]
+        List {
+            Section {
+                Picker(selection: $activeAppIcon) {
+                    let customIcons: [String] = ["AppIcon", "AppIcon 1"]
 
-                ForEach(customIcons, id: \.self) { icon in
-                    Text(icon)
-                        .tag(icon)
+                    ForEach(customIcons, id: \.self) { icon in
+                        Text(icon)
+                            .tag(icon)
+                    }
+                } label: {
                 }
-            } label: {
+            }.onChange(of: activeAppIcon, { _, newValue in
+                UIApplication.shared.setAlternateIconName(newValue)
+            })
+
+            Section {
+                Button("Logout") {
+                    try? viewModel.signOut()
+                }
             }
-        }.onChange(of: activeAppIcon, { _, newValue in
-            UIApplication.shared.setAlternateIconName(newValue)
-        })
+        }
     }
 }
 

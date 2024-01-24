@@ -14,7 +14,18 @@ struct ContentView: View {
     var body: some View {
         Group {
             if viewModel.userSession != nil {
-                TodosListView()
+                TabView {
+                    TodosListView()
+                        .tabItem {
+                            Text("Todos")
+                        }
+
+                    SettingsView()
+                        .tabItem {
+                            Text("Settings")
+                        }
+                }
+
             } else {
                 LoginView()
             }
