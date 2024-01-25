@@ -20,7 +20,10 @@ struct TodosListView: View {
             ForEach(vmTodo.items.sorted(by: { t1, t2 in
                 t1.creationDate < t2.creationDate
             })) { item in
-                Text(item.title)
+                HStack{
+                    Image(systemName: "checkmark")
+                    Text(item.isDone ? item.title.uppercased() : item.title.lowercased())
+                }
             }
             Spacer()
             HStack {
@@ -43,9 +46,9 @@ struct TodosListView: View {
         .padding()
         .sheet(isPresented: $addTodoSheet, onDismiss: {
             addTodoSheet = false
-        },content: {
+        }, content: {
             AddTodoView()
-                .presentationDetents([.fraction(30)])
         })
+        .presentationDetents([.fraction(30)])
     }
 }

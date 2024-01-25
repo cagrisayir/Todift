@@ -11,7 +11,7 @@ class Todo: Identifiable, Codable {
     let id: String
     let title: String
     let creationDate: Date
-    let isDone: Bool
+    var isDone: Bool
     let flag: Flags
 
     init(title: String, flag: Flags) {
