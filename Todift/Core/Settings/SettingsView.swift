@@ -14,6 +14,22 @@ struct SettingsView: View {
     var body: some View {
         List {
             Section {
+                HStack {
+                    ZStack {
+                        Circle()
+                            .foregroundStyle(.gray)
+                            .frame(width: 85)
+                        Text(viewModel.currentUser?.fullname.firstLetters() ?? "")
+                            .font(.title)
+                            .foregroundStyle(.white)
+                    }
+                    VStack(alignment: .leading, spacing: 20) {
+                        Text(viewModel.currentUser?.fullname ?? "User name")
+                        Text(viewModel.currentUser?.email ?? "Email")
+                    }
+                }
+            }
+            Section {
                 Picker(selection: $activeAppIcon) {
                     let customIcons: [String] = ["AppIcon", "AppIcon 1"]
 
@@ -22,6 +38,7 @@ struct SettingsView: View {
                             .tag(icon)
                     }
                 } label: {
+                    Text("Choose the app icon")
                 }
             }.onChange(of: activeAppIcon, { _, newValue in
                 UIApplication.shared.setAlternateIconName(newValue)

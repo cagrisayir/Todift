@@ -12,6 +12,7 @@
 		060523422B49786500A8FCAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 060523412B49786500A8FCAF /* Assets.xcassets */; };
 		060523452B49786500A8FCAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 060523442B49786500A8FCAF /* Preview Assets.xcassets */; };
 		067D44752B627583007339E5 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067D44742B627582007339E5 /* AddTodoView.swift */; };
+		067D44772B62A475007339E5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067D44762B62A475007339E5 /* Extensions.swift */; };
 		06E2239F2B5BC3B100CAB6B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06E2239E2B5BC3B100CAB6B0 /* GoogleService-Info.plist */; };
 		06E223A22B5BC49A00CAB6B0 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 06E223A12B5BC49A00CAB6B0 /* FirebaseAnalytics */; };
 		06E223A42B5BC49A00CAB6B0 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 06E223A32B5BC49A00CAB6B0 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -65,6 +66,7 @@
 		060523412B49786500A8FCAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		060523442B49786500A8FCAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		067D44742B627582007339E5 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
+		067D44762B62A475007339E5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		06E2239E2B5BC3B100CAB6B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		06E223D72B5BCB1800CAB6B0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		06E224512B5D715600CAB6B0 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 		0605234D2B49790000A8FCAF /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				067D44762B62A475007339E5 /* Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				06E2B7122B611F5300C30812 /* TodosListView.swift in Sources */,
 				06E2B7102B611A9F00C30812 /* AuthViewModel.swift in Sources */,
 				06E2B70C2B5FE27000C30812 /* InputView.swift in Sources */,
+				067D44772B62A475007339E5 /* Extensions.swift in Sources */,
 				060523402B49786400A8FCAF /* ContentView.swift in Sources */,
 				06E2B7142B612D4300C30812 /* TodoViewModel.swift in Sources */,
 				0605233E2B49786400A8FCAF /* MainApp.swift in Sources */,
