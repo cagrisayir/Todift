@@ -17,12 +17,18 @@ struct TodosListView: View {
 
     var body: some View {
         VStack {
-            ForEach(vmTodo.items.sorted(by: { t1, t2 in
-                t1.creationDate < t2.creationDate
-            })) { item in
-                HStack{
-                    Image(systemName: "checkmark")
-                    Text(item.isDone ? item.title.uppercased() : item.title.lowercased())
+            HStack {
+                Text("Todos")
+                    .font(.largeTitle)
+                Spacer()
+            }
+            .padding()
+
+            ScrollView {
+                ForEach(vmTodo.items.sorted(by: { t1, t2 in
+                    t1.creationDate < t2.creationDate
+                })) { item in
+                    TodoItemView(todo: item)
                 }
             }
             Spacer()
@@ -48,7 +54,11 @@ struct TodosListView: View {
             addTodoSheet = false
         }, content: {
             AddTodoView()
+                .presentationDetents([.medium])
         })
-        .presentationDetents([.fraction(30)])
     }
+}
+
+#Preview {
+    TodosListView()
 }

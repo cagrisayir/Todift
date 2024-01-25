@@ -45,6 +45,10 @@ class TodoViewModel: ObservableObject {
         }
     }
 
+    func changeToDone(for todoId: String) {
+        Firestore.firestore().collectionGroup("todos").whereField("id", isEqualTo: todoId).setValue(true, forKey: "isDone")
+    }
+
     func fetchTodos() async {
         if let snapshot = try? await Firestore.firestore().collectionGroup("todos").getDocuments() {
             for document in snapshot.documents {
