@@ -22,12 +22,12 @@ class TodoViewModel: ObservableObject {
         }
     }
 
-    func addTodo() async {
+    func addTodo(title: String, flag: Flags) async {
         // Get current user id
         guard let uId = Auth.auth().currentUser?.uid else { return }
 
         // create model
-        let newTodo = Todo(title: "This is the first todo", flag: .important)
+        let newTodo = Todo(title: title, flag: flag)
         // save model
 
         do {
@@ -36,6 +36,8 @@ class TodoViewModel: ObservableObject {
                 .collection("todos")
                 .document(newTodo.id)
                 .setData(newTodo.todoToDict())
+
+            await fetchTodos()
 
         } catch {
             print("Error accured in addTodo \(error)")
@@ -47,7 +49,12 @@ class TodoViewModel: ObservableObject {
         if let snapshot = try? await Firestore.firestore().collectionGroup("todos").getDocuments() {
             for document in snapshot.documents {
                 if let todo = Todo.fromDictionary(document.data()) {
-                    items.append(todo)
+                    // if id doesn't exist then fetch.
+                    if items.filter({ item in
+                        item.id == todo.id
+                    }).isEmpty {
+                        items.append(todo)
+                    }
                 } else {
                     print("failed to add")
                 }

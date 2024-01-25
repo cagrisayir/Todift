@@ -31,6 +31,7 @@ struct MainApp: App {
     }
 
     @StateObject var viewModel = AuthViewModel()
+    @StateObject var vmTodo = TodoViewModel()
 
     var body: some Scene {
         WindowGroup {
@@ -43,6 +44,7 @@ struct MainApp: App {
                     })
             }
             .environmentObject(viewModel)
+            .environmentObject(vmTodo)
         }
     }
 }

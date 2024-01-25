@@ -23,10 +23,23 @@ class Todo: Identifiable, Codable {
     }
 }
 
-enum Flags: Codable {
+enum Flags: Codable, CaseIterable, Identifiable, CustomStringConvertible {
     case important
     case normal
     case notimportant
+
+    var id: Self { self }
+
+    var description: String {
+        switch self {
+        case .important:
+            return "Important"
+        case .normal:
+            return "Normal"
+        case .notimportant:
+            return "Not Important"
+        }
+    }
 }
 
 extension Todo {
