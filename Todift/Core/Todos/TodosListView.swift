@@ -39,7 +39,7 @@ struct TodosListView: View {
                     }
             }
                 .listStyle(.inset)
-
+            AdBannerView(adUnitID: "ca-app-pub-3940256099942544/2934735716").frame(height: 120)
             Spacer()
             HStack {
                 Spacer()
