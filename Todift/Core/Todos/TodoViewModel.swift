@@ -6,14 +6,11 @@
 //
 
 import Firebase
-import FirebaseFirestoreSwift
+import FirebaseFirestore
 import Foundation
 
 @MainActor
 class TodoViewModel: ObservableObject {
-    @Published var errorString: String?
-    @Published var items: [Todo] = [Todo]()
-
     let db = Firestore.firestore()
 
     func addTodo(title: String, flag: Flags) async {
@@ -23,7 +20,6 @@ class TodoViewModel: ObservableObject {
         // create model
         let newTodo = Todo(title: title, flag: flag)
         // save model
-
         do {
             try await db.collection("users")
                 .document(uId)
@@ -31,32 +27,27 @@ class TodoViewModel: ObservableObject {
                 .document(newTodo.id)
                 .setData(newTodo.todoToDict())
 
-//            await fetchTodos()
-
         } catch {
             print("Error accured in addTodo \(error)")
-            errorString = error.localizedDescription
         }
     }
 
-    func changeToDone(for todoId: String) {
-        Firestore.firestore().collectionGroup("todos").whereField("id", isEqualTo: todoId).setValue(true, forKey: "isDone")
+    func changeToDone(item: Todo) {
+        var itemCopy = item
+        itemCopy.changeDone(!item.isDone)
+
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+
+        db.collection("users").document(uid).collection("todos").document(itemCopy.id).setData(itemCopy.todoToDict())
     }
 
-//    func fetchTodos() async {
-//        if let snapshot = try? await Firestore.firestore().collectionGroup("todos").getDocuments() {
-//            for document in snapshot.documents {
-//                if let todo = Todo.fromDictionary(document.data()) {
-//                    // if id doesn't exist then fetch.
-//                    if items.filter({ item in
-//                        item.id == todo.id
-//                    }).isEmpty {
-//                        items.append(todo)
-//                    }
-//                } else {
-//                    print("failed to add")
-//                }
-//            }
-//        }
-//    }
+    func delete(id: String) {
+        guard let uId = Auth.auth().currentUser?.uid else { return }
+        db
+            .collection("users")
+            .document(uId)
+            .collection("todos")
+            .document(id)
+            .delete()
+    }
 }

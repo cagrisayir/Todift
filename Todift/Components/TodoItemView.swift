@@ -15,22 +15,12 @@ struct TodoItemView: View {
         HStack {
             HStack {
                 Button(action: {
-                    vmTodo.changeToDone(for: todo.id)
-                    todo.isDone.toggle()
-
+                    vmTodo.changeToDone(item: todo)
                 }, label: {
-                    ZStack {
-                        Circle()
-                            .foregroundStyle(.white)
-                            .frame(height: 21)
-                            .overlay {
-                                if todo.isDone {
-                                    Image(systemName: "checkmark.circle.fill")
-                                        .imageScale(.large)
-                                        .foregroundStyle(.green)
-                                }
-                            }
-                    }
+                    Image(systemName: todo.isDone ? "checkmark.circle.fill" : "circle")
+                        .imageScale(.large)
+                        .foregroundStyle(.green)
+
                 })
 
                 Text(todo.title)
@@ -50,7 +40,7 @@ struct TodoItemView: View {
             }
             .padding(.horizontal, 5)
         }
-        .background(.orange)
+        .background(Color.indigo)
     }
 }
 

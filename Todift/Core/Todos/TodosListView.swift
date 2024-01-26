@@ -10,7 +10,7 @@ import FirebaseFirestoreSwift
 import SwiftUI
 
 struct TodosListView: View {
-//    @EnvironmentObject var vmTodo: TodoViewModel
+    @EnvironmentObject var vmTodo: TodoViewModel
     @FirestoreQuery(collectionPath: "users") var items: [Todo]
     @State var addTodoSheet: Bool = false
 
@@ -27,17 +27,19 @@ struct TodosListView: View {
             }
             .padding()
 
-            ScrollView {
-                ForEach(items.sorted(by: { t1, t2 in
-                    t1.creationDate > t2.creationDate
-                })) { item in
-                    TodoItemView(todo: item)
-//                    Text(item.title)
-                }
+            List(items.sorted(by: { t1, t2 in
+                t1.creationDate > t2.creationDate
+            })) { item in
+                TodoItemView(todo: item)
+                    .swipeActions {
+                        Button("delete") {
+                            vmTodo.delete(id: item.id)
+                        }
+                        .background(Color.red)
+                    }
             }
-            .onAppear(perform: {
-                print(items.count)
-            })
+                .listStyle(.inset)
+
             Spacer()
             HStack {
                 Spacer()
@@ -56,16 +58,17 @@ struct TodosListView: View {
                 })
             }
         }
-        .padding()
+        .background(.gray)
         .sheet(isPresented: $addTodoSheet, onDismiss: {
             addTodoSheet = false
         }, content: {
             AddTodoView()
                 .presentationDetents([.medium])
         })
+        
     }
 }
-//
-//#Preview {
-//    TodosListView(userId: "A1vOHzXWYnhx76YxnpuLlzUmV9n1")
-//}
+
+#Preview {
+    TodosListView(userId: "A1vOHzXWYnhx76YxnpuLlzUmV9n1")
+}
