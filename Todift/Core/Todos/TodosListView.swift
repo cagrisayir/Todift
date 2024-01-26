@@ -9,11 +9,14 @@ import Firebase
 import FirebaseFirestoreSwift
 import SwiftUI
 
-@MainActor
 struct TodosListView: View {
-    @EnvironmentObject var vmTodo: TodoViewModel
-
+//    @EnvironmentObject var vmTodo: TodoViewModel
+    @FirestoreQuery(collectionPath: "users") var items: [Todo]
     @State var addTodoSheet: Bool = false
+
+    init(userId: String) {
+        _items = FirestoreQuery(collectionPath: "users/\(userId)/todos")
+    }
 
     var body: some View {
         VStack {
@@ -25,12 +28,16 @@ struct TodosListView: View {
             .padding()
 
             ScrollView {
-                ForEach(vmTodo.items.sorted(by: { t1, t2 in
-                    t1.creationDate < t2.creationDate
+                ForEach(items.sorted(by: { t1, t2 in
+                    t1.creationDate > t2.creationDate
                 })) { item in
                     TodoItemView(todo: item)
+//                    Text(item.title)
                 }
             }
+            .onAppear(perform: {
+                print(items.count)
+            })
             Spacer()
             HStack {
                 Spacer()
@@ -58,7 +65,7 @@ struct TodosListView: View {
         })
     }
 }
-
-#Preview {
-    TodosListView()
-}
+//
+//#Preview {
+//    TodosListView(userId: "A1vOHzXWYnhx76YxnpuLlzUmV9n1")
+//}

@@ -16,12 +16,6 @@ class TodoViewModel: ObservableObject {
 
     let db = Firestore.firestore()
 
-    init() {
-        Task {
-            await fetchTodos()
-        }
-    }
-
     func addTodo(title: String, flag: Flags) async {
         // Get current user id
         guard let uId = Auth.auth().currentUser?.uid else { return }
@@ -37,7 +31,7 @@ class TodoViewModel: ObservableObject {
                 .document(newTodo.id)
                 .setData(newTodo.todoToDict())
 
-            await fetchTodos()
+//            await fetchTodos()
 
         } catch {
             print("Error accured in addTodo \(error)")
@@ -49,20 +43,20 @@ class TodoViewModel: ObservableObject {
         Firestore.firestore().collectionGroup("todos").whereField("id", isEqualTo: todoId).setValue(true, forKey: "isDone")
     }
 
-    func fetchTodos() async {
-        if let snapshot = try? await Firestore.firestore().collectionGroup("todos").getDocuments() {
-            for document in snapshot.documents {
-                if let todo = Todo.fromDictionary(document.data()) {
-                    // if id doesn't exist then fetch.
-                    if items.filter({ item in
-                        item.id == todo.id
-                    }).isEmpty {
-                        items.append(todo)
-                    }
-                } else {
-                    print("failed to add")
-                }
-            }
-        }
-    }
+//    func fetchTodos() async {
+//        if let snapshot = try? await Firestore.firestore().collectionGroup("todos").getDocuments() {
+//            for document in snapshot.documents {
+//                if let todo = Todo.fromDictionary(document.data()) {
+//                    // if id doesn't exist then fetch.
+//                    if items.filter({ item in
+//                        item.id == todo.id
+//                    }).isEmpty {
+//                        items.append(todo)
+//                    }
+//                } else {
+//                    print("failed to add")
+//                }
+//            }
+//        }
+//    }
 }

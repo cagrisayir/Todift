@@ -7,18 +7,21 @@
 
 import Foundation
 
-@Observable
-class Todo: Identifiable, Codable {
+struct Todo: Identifiable, Codable {
     let id: String
     let title: String
-    let creationDate: Date
+    let creationDate: TimeInterval
     var isDone: Bool
     let flag: Flags
+
+    mutating func changeDone(_ state: Bool) {
+        isDone = state
+    }
 
     init(title: String, flag: Flags) {
         id = UUID().uuidString
         self.title = title
-        creationDate = Date()
+        creationDate = Date().timeIntervalSince1970
         isDone = false
         self.flag = flag
     }

@@ -42,12 +42,13 @@ struct TodoItemView: View {
             Spacer()
 
             VStack {
-                Text(todo.creationDate.formatted())
+                Text("\(Date(timeIntervalSince1970: todo.creationDate).formatted(date: .abbreviated, time: .shortened))")
                     .foregroundStyle(.white)
 
                 Text(todo.flag.description)
                     .foregroundStyle(todo.flag == .important ? .red : .white)
             }
+            .padding(.horizontal, 5)
         }
         .background(.orange)
     }
